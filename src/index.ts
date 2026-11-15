@@ -19,7 +19,7 @@ export function createQrMatrix(url: string, errorCorrection: QrOptions['errorCor
 }
 /** Generate an opaque, four-module-bordered SVG without a browser or React. */
 export function generateQrSvg(url: string, options: QrOptions={}): string {
- const color=options.color??'#222822',size=options.size??1024;
+ const color=options.color??'#000000',size=options.size??1024;
  if(!/^#[0-9a-f]{6}$/i.test(color)) throw new Error('Color must be a six-digit hex value.');
  if(!Number.isInteger(size)||size<64||size>8192) throw new Error('Size must be an integer from 64 to 8192.');
  const qr=createQrMatrix(url,options.errorCorrection),n=qr.getModuleCount(),extent=n+8;let path='';

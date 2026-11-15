@@ -56,5 +56,5 @@ CI validates the package and demo. The Pages workflow deploys `demo/dist` after
 changes land on main; enable GitHub Pages with GitHub Actions as the source.
 The first npm release requires access to the `@asafarim` scope and npm authentication.
 
-This repository prepares version 1.4.0; package installation becomes available
+This repository prepares version 1.4.1; package installation becomes available
 once that release is published to npm.
