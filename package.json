@@ -1,6 +1,6 @@
 {
   "name": "@asafarim/qr-studio",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Private QR generation with a typed core and React studio for logos, branding and PNG/SVG export.",
   "type": "module",
   "main": "./dist/index.js",
