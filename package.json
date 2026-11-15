@@ -1,0 +1,66 @@
+{
+  "name": "@asafarim/qr-studio",
+  "version": "1.4.0",
+  "description": "Private QR generation with a typed core and React studio for logos, branding and PNG/SVG export.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    }
+  },
+  "files": [
+    "dist",
+    "THIRD_PARTY_NOTICES.txt"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mjs",
+    "demo": "pnpm build && pnpm --dir demo dev",
+    "build:demo": "pnpm build && pnpm --dir demo build",
+    "prepublishOnly": "pnpm build && pnpm typecheck && pnpm test"
+  },
+  "dependencies": {
+    "qrcode-generator": "2.0.4"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliSafari-IT/asafarim-qr-studio.git"
+  },
+  "homepage": "https://alisafari-it.github.io/asafarim-qr-studio/",
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "qr",
+    "qrcode",
+    "svg",
+    "react",
+    "logo",
+    "asafarim"
+  ]
+}
